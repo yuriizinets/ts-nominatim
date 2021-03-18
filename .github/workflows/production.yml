@@ -24,8 +24,11 @@ jobs:
     - name: Build
       run: npm run build
     
-    - name: Archive build artifacts
-      uses: actions/upload-artifact@v2
+    - name: Release
+      uses: softprops/action-gh-release@v1
       with:
-          name: nominatim
-          path: dist/*
+        files: |
+          dist/nominatim.js 
+          dist/nominatim.js.map
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
