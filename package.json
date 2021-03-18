@@ -1,0 +1,15 @@
+{
+  "name": "ts-nominatim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/* --outdir=dist --minify --sourcemap"
+  },
+  "keywords": [],
+  "author": "Yurii Zinets",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.9.3"
+  }
+}
